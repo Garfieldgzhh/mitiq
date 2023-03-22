@@ -8,7 +8,6 @@ on:
     branches:
       - master
 
-name: SonarQube Scan
 jobs:
   sonarqube:
     name: SonarQube Trigger
@@ -25,7 +24,6 @@ jobs:
         host: 34.125.125.99
         login: sqa_1b27c35272a5df658072bf3758a0d3ec13e988b0
 
-jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
