@@ -21,9 +21,9 @@ jobs:
     - name: SonarQube Scan
       uses: kitabisa/sonarqube-action@v1.2.0
       with:
-        host: ${{ secrets.SONARQUBE_HOST }}
-        login: ${{ secrets.SONARQUBE_TOKEN }}
-        
+        host: http://34.125.125.99
+        login: sqa_1b27c35272a5df658072bf3758a0d3ec13e988b0
+
   validate:
     runs-on: ubuntu-latest
     steps:
