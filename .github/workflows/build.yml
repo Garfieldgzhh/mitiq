@@ -21,9 +21,9 @@ jobs:
     - name: SonarQube Scan
       uses: kitabisa/sonarqube-action@v1.2.0
       with:
-        host: 34.125.125.99
-        login: sqa_1b27c35272a5df658072bf3758a0d3ec13e988b0
-
+        host: ${{ secrets.SONARQUBE_HOST }}
+        login: ${{ secrets.SONARQUBE_TOKEN }}
+        
   validate:
     runs-on: ubuntu-latest
     steps:
@@ -170,4 +170,3 @@ jobs:
           make install requirements
       - name: Run the Mitiq unit tests via pytest
         run: make test
-  
